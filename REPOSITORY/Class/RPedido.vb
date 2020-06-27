@@ -89,7 +89,8 @@ Public Class RPedido
                                       .oacnrofact = a.oacnrofact,
                                       .obtotal = a.obtotal,
                                       .IdZona = a.IdZona,
-                                      .oafdoc = a.oafdoc
+                                      .oafdoc = a.oafdoc,
+                                      .oanumi = a.oanumi
                                       }).ToList()
                 Return listResult
 

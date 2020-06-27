@@ -94,4 +94,13 @@
             _oafdoc = value
         End Set
     End Property
+    Private _oanumi As Integer
+    Public Property oanumi() As Integer
+        Get
+            Return _oanumi
+        End Get
+        Set(ByVal value As Integer)
+            _oanumi = value
+        End Set
+    End Property
 End Class

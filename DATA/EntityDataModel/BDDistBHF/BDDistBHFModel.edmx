@@ -1296,6 +1296,7 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_GO_DespachoXCliente' 
             <PropertyRef Name="oaccbnumi" />
             <PropertyRef Name="ccnumi" />
             <PropertyRef Name="oacnrofact" />
+            <PropertyRef Name="oanumi" />
           </Key>
           <Property Name="oaccbnumi" Type="int" Nullable="false" />
           <Property Name="ccnumi" Type="int" Nullable="false" />
@@ -1309,6 +1310,7 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_GO_DespachoXCliente' 
           <Property Name="oaest" Type="int" />
           <Property Name="oaap" Type="int" />
           <Property Name="oafdoc" Type="date" />
+          <Property Name="oanumi" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_GO_DespachoXProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -3324,7 +3326,8 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_VistaPedido_PrecioCos
     [VR_GO_DespachoXCliente].[IdZona] AS [IdZona], 
     [VR_GO_DespachoXCliente].[oaest] AS [oaest], 
     [VR_GO_DespachoXCliente].[oaap] AS [oaap], 
-    [VR_GO_DespachoXCliente].[oafdoc] AS [oafdoc]
+    [VR_GO_DespachoXCliente].[oafdoc] AS [oafdoc], 
+    [VR_GO_DespachoXCliente].[oanumi] AS [oanumi]
     FROM [dbo].[VR_GO_DespachoXCliente] AS [VR_GO_DespachoXCliente]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="VR_GO_DespachoXProducto" EntityType="Self.VR_GO_DespachoXProducto" store:Type="Views" store:Schema="dbo">
@@ -5954,6 +5957,7 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_VistaPedido_PrecioCos
             <PropertyRef Name="oaccbnumi" />
             <PropertyRef Name="ccnumi" />
             <PropertyRef Name="oacnrofact" />
+            <PropertyRef Name="oanumi" />
           </Key>
           <Property Name="oaccbnumi" Type="Int32" Nullable="false" />
           <Property Name="ccnumi" Type="Int32" Nullable="false" />
@@ -5967,6 +5971,7 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_VistaPedido_PrecioCos
           <Property Name="oafdoc" Type="DateTime" Precision="0" />
           <Property Name="obdesc" Type="Decimal" Precision="38" Scale="2" />
           <Property Name="obtotal" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="oanumi" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="VR_GO_DespachoXProducto">
           <Key>
@@ -8218,6 +8223,7 @@ advertencia 6002: La tabla o vista 'BDDistBHF_Tarma.dbo.VR_VistaPedido_PrecioCos
           <EntitySetMapping Name="VR_GO_DespachoXCliente">
             <EntityTypeMapping TypeName="BDDistBHFModel.VR_GO_DespachoXCliente">
               <MappingFragment StoreEntitySet="VR_GO_DespachoXCliente">
+                <ScalarProperty Name="oanumi" ColumnName="oanumi" />
                 <ScalarProperty Name="obtotal" ColumnName="obtotal" />
                 <ScalarProperty Name="obdesc" ColumnName="obdesc" />
                 <ScalarProperty Name="oafdoc" ColumnName="oafdoc" />

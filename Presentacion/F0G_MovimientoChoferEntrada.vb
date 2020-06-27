@@ -852,6 +852,8 @@ Public Class F0G_MovimientoChoferEntrada
         For j As Integer = 0 To TablaPrincipal.Rows.Count - 1 Step 1
             Dim idprod As Integer = TablaPrincipal.Rows(j).Item("canumi")
             Dim result As DataRow() = dtVentaMovil.Select("obcprod=" + Str(idprod))
+            'Dim result As DataRow() = dtVentaMovil.Select("obcprod=" & idprod)
+
             For i As Integer = 0 To result.Length - 1 Step 1
                 Dim rowIndex As Integer = TablaPrincipal.Rows.IndexOf(result(i))
                 TablaPrincipal.Rows(j).Item("MOVIL") = IIf(IsDBNull(TablaPrincipal.Rows(j).Item("MOVIL")), 0, TablaPrincipal.Rows(j).Item("MOVIL")) + result(i).Item("obpcant")

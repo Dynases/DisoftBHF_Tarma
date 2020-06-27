@@ -287,7 +287,7 @@ Public Class F02_Precio
         ''JGr_Detalle.RootTable.Columns.Add()
         With JGr_Detalle.RootTable.Columns(2)
             .Caption = "Descripcion"
-            .Width = 220
+            .Width = 350
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .CellStyle.FontSize = gi_fuenteTamano
             .CellStyle.BackColor = Color.AliceBlue

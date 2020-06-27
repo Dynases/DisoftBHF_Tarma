@@ -1576,6 +1576,10 @@ Public Class F02_Pedido
                 JGr_Clientes.MoveTo(JGr_Clientes.FilterRow)
                 JGr_Clientes.Col = 1
             Else
+                ''Eliminó primero la TV001 y TV0011
+                Dim mensajeError As String = ""
+                L_fnEliminarVenta(Tb_Id.Text, mensajeError)
+
                 L_PedidoCabacera_Modificar(Tb_Id.Text, Tb_Fecha.Value.ToString("yyyy/MM/dd"), Tb_Hora.Text, Tb_CliCod.Text, Tb_CliCodZona.Text, cbDistribuidor.Value.ToString, Tb_Observaciones.Text, IIf(_nuevoBasePeriodico = True, "10", "1"))
                 L_PedidoCabacera_ModificarExtencion(Tb_Id.Text, cbPreVendedor.Value.ToString)
 
@@ -1621,6 +1625,10 @@ Public Class F02_Pedido
                     End If
 
                 End If
+
+                ''Vuelvo a insertar en la TV001 y TV0011
+                GrabarTV001(Tb_Id.Text)
+                updateTO001C(Tb_Id.Text, "0")
 
                 ToastNotification.Show(Me, "Codigo de Pedido " + Tb_Id.Text + " Modificado con Exito.", My.Resources.GRABACION_EXITOSA, 5000, eToastGlowColor.Green, eToastPosition.BottomLeft)
                 '_Deshabilitar()

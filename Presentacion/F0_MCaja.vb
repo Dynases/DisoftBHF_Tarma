@@ -536,9 +536,9 @@ Public Class F0_MCaja
             Dgv_PedidoTotal.AlternatingColors = True
             'oanumi , oafdoc, oaccli, cliente, oarepa, oaest, oaap, oapg, total,contado,credito, estado
             With Dgv_PedidoTotal.RootTable.Columns("oanumi")
-                .Width = 100
-                .Caption = "CODIGO"
-                .Visible = False
+                .Width = 120
+                .Caption = "NOTA VENTA"
+                .Visible = True
             End With
             With Dgv_PedidoTotal.RootTable.Columns("oafdoc")
                 .Width = 90
@@ -560,7 +560,7 @@ Public Class F0_MCaja
             With Dgv_PedidoTotal.RootTable.Columns("oacnrofac")
                 .Width = 150
                 .Caption = "NRO. FACTURA"
-                .Visible = True
+                .Visible = False
             End With
 
             With Dgv_PedidoTotal.RootTable.Columns("cliente")
@@ -633,9 +633,9 @@ Public Class F0_MCaja
             Dgv_PedidoTotal.AlternatingColors = True
             'oanumi , oafdoc, oaccli, cliente, oarepa, oaest, oaap, oapg, total,contado,credito, estado
             With Dgv_PedidoTotal.RootTable.Columns("oanumi")
-                .Width = 100
-                .Caption = "CODIGO"
-                .Visible = False
+                .Width = 120
+                .Caption = "NOTA VENTA"
+                .Visible = True
             End With
             With Dgv_PedidoTotal.RootTable.Columns("oafdoc")
                 .Width = 90
@@ -658,7 +658,7 @@ Public Class F0_MCaja
             With Dgv_PedidoTotal.RootTable.Columns("oacnrofac")
                 .Width = 150
                 .Caption = "Nro Factura"
-                .Visible = True
+                .Visible = False
             End With
 
             With Dgv_PedidoTotal.RootTable.Columns("cliente")

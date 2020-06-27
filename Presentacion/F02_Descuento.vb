@@ -206,8 +206,8 @@ Public Class F02_Descuento
 
         ''JGr_Detalle.RootTable.Columns.Add()
         With JGr_Detalle.RootTable.Columns(2)
-            .Caption = "Descripcion"
-            .Width = 350
+            .Caption = "Descripción"
+            .Width = 450
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .CellStyle.FontSize = gi_fuenteTamano
             .CellStyle.BackColor = Color.AliceBlue
@@ -238,7 +238,7 @@ Public Class F02_Descuento
             .TextAlignment = TextAlignment.Near
             .CellStyle.FontSize = gi_fuenteTamano
             .CellStyle.BackColor = Color.AliceBlue
-            .Visible = True
+            .Visible = False
         End With
 
         'Habilitar Filtradores

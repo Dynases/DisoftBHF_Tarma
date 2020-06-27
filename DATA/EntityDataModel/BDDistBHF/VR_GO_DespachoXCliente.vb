@@ -38,5 +38,7 @@ Partial Public Class VR_GO_DespachoXCliente
 
     Public Property obtotal As Nullable(Of Decimal)
 
+    Public Property oanumi As Integer
+
 
 End Class

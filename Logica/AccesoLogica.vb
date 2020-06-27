@@ -10411,7 +10411,7 @@ Public Class AccesoLogica
         _listParam.Add(New Datos.DParametro("@oluact", L_Usuario))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TO005", _listParam)
 
-        If _Tabla.Rows.Count > 0 Then
+        If _Tabla.Rows(0).Item("tanumi") > 0 Then
             _idpedido = _Tabla.Rows(0).Item(0)
             _resultado = True
         Else
